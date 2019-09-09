@@ -1,5 +1,7 @@
 # README
-##userテーブル
+
+userテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
