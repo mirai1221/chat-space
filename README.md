@@ -6,8 +6,8 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-  has_many :message
-  has_many :group, through: :user_group
+- has_many :message
+- has_many :group, through: :user_group
   
 ##messageテーブル
 |Column|Type|Options|
