@@ -1,6 +1,4 @@
 # README
-
-# README
 ##userテーブル
 |Column|Type|Options|
 |------|----|-------|
