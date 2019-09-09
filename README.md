@@ -17,8 +17,8 @@
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 ### Association
-  belongs_to :user
-  belongs_to :group
+- belongs_to :user
+- belongs_to :group
 
 ##groupテーブル
 Column|Type|Options|
@@ -26,7 +26,7 @@ Column|Type|Options|
 |user_id|integer|null: false|
 |groupname|string|null: false|
 ### Association
-  has_many :user, through: :user_group
+- has_many :user, through: :user_group
 
 ##user_groupテーブル
 Column|Type|Options|
@@ -34,8 +34,8 @@ Column|Type|Options|
 |user_id|integer|null: false foreign_key: true|
 |group_id|integer|null: false foreign_key: true|
 ### Association
-  belongs_to :user
-  belongs_to :group
+- belongs_to :user
+- belongs_to :group
 
 
 This README would normally document whatever steps are necessary to get the
