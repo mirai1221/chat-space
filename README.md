@@ -1,6 +1,6 @@
 # README
 
-userテーブル
+usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -21,7 +21,7 @@ userテーブル
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 ### Association
-- belongs_to :users
+- belongs_to :user
 - belongs_to :group
 
 ##groupテーブル
