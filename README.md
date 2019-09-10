@@ -12,6 +12,7 @@ userテーブル
 - has_many :group, through: :user_group
   
 ##messageテーブル
+
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
@@ -23,6 +24,7 @@ userテーブル
 - belongs_to :group
 
 ##groupテーブル
+
 Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false|
@@ -31,6 +33,7 @@ Column|Type|Options|
 - has_many :user, through: :user_group
 
 ##user_groupテーブル
+
 Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false foreign_key: true|
