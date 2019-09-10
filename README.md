@@ -32,6 +32,7 @@ Column|Type|Options|
 ### Association
 - has_many :users, through: :user_group
 - has many :user_groups
+- has many :messages
 
 ##user_groupテーブル
 
