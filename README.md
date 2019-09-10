@@ -6,31 +6,32 @@ userテーブル
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :message
-- has_many :group, through: :user_group
+- has_many :messages
+- has_many :groups, through: :user_group
+- has many :user_groups
   
 ##messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text|
 |image|string|
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 ### Association
-- belongs_to :user
+- belongs_to :users
 - belongs_to :group
 
 ##groupテーブル
 
 Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|groupname|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :user, through: :user_group
+- has_many :users, through: :user_group
+- has many :user_groups
 
 ##user_groupテーブル
 
