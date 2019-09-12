@@ -42,7 +42,7 @@
 
 .chat-groups{
     background-color:#2f3e51;
-    color:$whitecolor;
+    color:$white;
     overflow: scroll;
     font-weight:bold;
     padding-bottom:5px;
@@ -148,6 +148,10 @@
           justify-content: flex-end;
           cursor: pointer;
           right:10px;
+        }
+
+        .image-form{
+          display: none;
         }
         
       }

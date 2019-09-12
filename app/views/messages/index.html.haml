@@ -36,8 +36,9 @@
       %form{class: "form-main"}
         .input-box
           %input{ placeholder: "type a message", type: "text", class: "input-box_text"}
-          .input-box__image
+          %label.input-box__image{for: "uplord-icon"}
             = fa_icon 'image'
+            %input{type:"file",value:"&#xf03e",id: "uplord-icon",class:"image-form"}
         %input{ type:"submit", value:"SEND", class:"submit-btn"}
 
 
