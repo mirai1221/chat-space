@@ -1,1 +1,43 @@
-.header
+.wrapper
+  .flash-message  
+    グループを作成しました
+
+  .chat-side
+    .side-header
+      .side-header__user-name
+        seo
+      .side-header__menu
+        =link_to "", class: "side-header__menu__btn" do
+          = fa_icon 'edit' 
+
+        =link_to "http://www.yahoo.co.jp/", class: "side-header__menu__btn" do
+          = fa_icon 'cog' 
+        
+    .chat-groups
+      .chat-group
+        .chat-group__name
+          sample
+        .chat-group__message
+          Good by world
+
+  .chat-main 
+    .main-header
+      .main-header__leftbox
+        .main-header__leftbox__curent-group
+          sample
+        .main-header__leftbox__curent-member
+          member:
+      .main-header__edit-btn
+        =link_to "Edit","",  {class: "main-header__edit-btn__btn--edit"}
+        
+    .messages
+      aaaaaaa
+    .form
+      %form{class: "form-main"}
+        .input-box
+          %input{ placeholder: "type a message", type: "text", class: "input-box_text"}
+          .input-box__image
+            = fa_icon 'image'
+        %input{ type:"submit", value:"SEND", class:"submit-btn"}
+
+
