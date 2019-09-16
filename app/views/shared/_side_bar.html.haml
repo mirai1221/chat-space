@@ -1,0 +1,17 @@
+.chat-side
+    .side-header
+      .side-header__user-name
+        = current_user.name
+      .side-header__menu
+        =link_to do
+          = fa_icon 'edit' ,class: "side-header__menu__btn"
+
+        =link_to edit_user_path(current_user) do
+          = fa_icon 'cog' ,class: "side-header__menu__btn"
+        
+    .chat-groups
+      .chat-group
+        .chat-group__name
+          sample
+        .chat-group__message
+          Good by world
