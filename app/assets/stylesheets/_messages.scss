@@ -1,4 +1,8 @@
 * {box-sizing: border-box;}
+a{
+  color:$white;
+  text-decoration: none
+      }
 
 .wrapper{
 
@@ -32,7 +36,7 @@
       display: inline-block;
       float:right;
       
-      &__btn{
+      &__icon{
         color:$white;
         text-decoration: none
       }
@@ -60,8 +64,11 @@
    }
     &__message {
       font-size:11px;
-      margin-bottom:40px;
-  
+      margin-bottom:40px;  
+      &__btn{
+        color:$white;
+        text-decoration: none
+      }
    }  
   }
 }
@@ -143,11 +150,12 @@
         &__image{
           font-size: 1.3rem;
           position: relative;
-          bottom: 33px;
-          display:flex;
-          justify-content: flex-end;
+          bottom: 38px;
           cursor: pointer;
           right:10px;
+          float:right;
+          // display:flex;
+          // justify-content: flex-end;
         }
 
         .image-form{
