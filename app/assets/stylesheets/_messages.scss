@@ -126,55 +126,95 @@ a{
     overflow: scroll;
   }
 
-  .form{
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
-    position: relative;
-
-    .form-main{
-      display: flex;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
     }
-
-      .input-box{
-        position: relative;
-        width: 100%;  
-        
-        .input-box_text{
-          height:50px;
-          width:100%;
-          padding:0 40px 0 10px;
-          color:434a54;
-          border-style:none;
-        }
-        &__image{
-          font-size: 1.3rem;
-          position: relative;
-          bottom: 38px;
-          cursor: pointer;
-          right:10px;
-          float:right;
-          // display:flex;
-          // justify-content: flex-end;
-        }
-
-        .image-form{
-          display: none;
-        }
-        
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
       }
-      .submit-btn{
-        background-color: #38AEF0;
-        width:100px;
-        height:50px;
-        padding:0 30px;
-        margin-left:15px;
-        color:$white;
+      .icon{
         cursor:pointer;
       }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $clearblue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}
+  
+  // .form{
+  //   height: 90px;
+  //   padding: 20px 40px;
+  //   background-color: #ddd;
+  //   position: relative;
+
+  //   .form-main{
+  //     display: flex;
+  //   }
+
+  //     .input-box{
+  //       position: relative;
+  //       width: 100%;  
+        
+  //       .input-box_text{
+  //         height:50px;
+  //         width:100%;
+  //         padding:0 40px 0 10px;
+  //         color:434a54;
+  //         border-style:none;
+  //       }
+  //       &__image{
+  //         font-size: 1.3rem;
+  //         position: relative;
+  //         bottom: 38px;
+  //         cursor: pointer;
+  //         right:10px;
+  //         float:right;
+  //         // display:flex;
+  //         // justify-content: flex-end;
+  //       }
+
+  //       .image-form{
+  //         display: none;
+  //       }
+        
+  //     }
+  //     .submit-btn{
+  //       background-color: #38AEF0;
+  //       width:100px;
+  //       height:50px;
+  //       padding:0 30px;
+  //       margin-left:15px;
+  //       color:$white;
+  //       cursor:pointer;
+  //     }
     
       
-  }
+  // }
 
-}      
+     
 
