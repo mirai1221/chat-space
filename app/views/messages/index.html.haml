@@ -1,24 +1,8 @@
 .wrapper
-  .flash-message  
-    グループを作成しました
+  -# .flash-message  
+  -#   グループを作成しました
 
-  .chat-side
-    .side-header
-      .side-header__user-name
-        seo
-      .side-header__menu
-        =link_to "", class: "side-header__menu__btn" do
-          = fa_icon 'edit' 
-
-        =link_to "http://www.yahoo.co.jp/", class: "side-header__menu__btn" do
-          = fa_icon 'cog' 
-        
-    .chat-groups
-      .chat-group
-        .chat-group__name
-          sample
-        .chat-group__message
-          Good by world
+  = render "shared/side_bar"
 
   .chat-main 
     .main-header
@@ -36,9 +20,8 @@
       %form{class: "form-main"}
         .input-box
           %input{ placeholder: "type a message", type: "text", class: "input-box_text"}
-          %label.input-box__image{for: "uplord-icon"}
-            = fa_icon 'image'
-            %input{type:"file",value:"&#xf03e",id: "uplord-icon",class:"image-form"}
+            %label.input-box__image{for: "uplord-icon"}
+              = fa_icon 'image'
+              %input{type:"file",value:"&#xf03e",id: "uplord-icon",class:"image-form"}
         %input{ type:"submit", value:"SEND", class:"submit-btn"}
-
 
