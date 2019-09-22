@@ -15,13 +15,22 @@
         =link_to "Edit","",  {class: "main-header__edit-btn__btn--edit"}
         
     .messages
-      aaaaaaa
+      = render partial: 'message', collection: @messages
     .form
-      %form{class: "form-main"}
-        .input-box
-          %input{ placeholder: "type a message", type: "text", class: "input-box_text"}
-            %label.input-box__image{for: "uplord-icon"}
-              = fa_icon 'image'
-              %input{type:"file",value:"&#xf03e",id: "uplord-icon",class:"image-form"}
-        %input{ type:"submit", value:"SEND", class:"submit-btn"}
-
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+    
+    
+    -# .form
+    -#   %form{class: "form-main"}
+    -#     .input-box
+    -#       %input{ placeholder: "type a message", type: "text", class: "input-box_text"}
+    -#         %label.input-box__image{for: "uplord-icon"}
+    -#           = fa_icon 'image'
+    -#           %input{type:"file",value:"&#xf03e",id: "uplord-icon",class:"image-form"}
+    -#     %input{ type:"submit", value:"SEND", class:"submit-btn"}
