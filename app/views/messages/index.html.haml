@@ -1,10 +1,8 @@
 .wrapper
-  -# .flash-message  
-  -#   グループを作成しました
 
   = render "shared/side_bar"
 
-  .chat-main 
+  .chat-main
     .main-header
       .main-header__leftbox
         .main-header__leftbox__curent-group
@@ -13,7 +11,7 @@
           member:
       .main-header__edit-btn
         =link_to "Edit","",  {class: "main-header__edit-btn__btn--edit"}
-        
+
     .messages
       = render partial: 'message', collection: @messages
     .form
@@ -24,8 +22,7 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-    
-    
+
     -# .form
     -#   %form{class: "form-main"}
     -#     .input-box
