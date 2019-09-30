@@ -11,7 +11,7 @@ a{
   background-color: #38AEF0;
   color:$white;
   text-align:center;
-} 
+}
 
 
 .chat-side{
@@ -26,7 +26,7 @@ a{
     height:100px;
     line-height:100px;
     padding:0 20px;
-   
+
     &__user-name{
       display: inline-block;
     }
@@ -35,7 +35,7 @@ a{
       height: 80px;
       display: inline-block;
       float:right;
-      
+
       &__icon{
         color:$white;
         text-decoration: none
@@ -52,27 +52,27 @@ a{
     padding-bottom:5px;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
-     
+
 
   .chat-group{
     margin-bottom:40px;
-  
+
     &__name {
       font-size:15px;
       margin-bottom:5px;
-  
+
    }
     &__message {
       font-size:11px;
-      margin-bottom:40px;  
+      margin-bottom:40px;
       &__btn{
         color:$white;
         text-decoration: none
       }
-   }  
+   }
   }
 }
-  
+
 .chat-main{
   width: calc(100vw - 300px);
   float:left;
