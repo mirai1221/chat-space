@@ -1,5 +1,14 @@
 $(function(){
   function buildPost(post){
+    console.log(post)
+
+    if(post.image.url){
+      var image = `<img src=${post.image.url}>`
+    }else{
+      var image =  ""
+    }
+    
+
     var html = `<div class="message">
                   <div class="upper-message">
                   <div class="upper-message__user-name">
@@ -13,7 +22,7 @@ $(function(){
                   <p class="lower-message__content">
                     ${post.content}
                   </p>
-                <img src=${post.image}>
+                ${image}
                 </div>
               </div>`
     return html;
@@ -43,6 +52,4 @@ $(function(){
       $('.form__submit').prop('disabled',false);
     })
   })
-
-
 });
