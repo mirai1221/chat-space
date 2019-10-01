@@ -1,13 +1,7 @@
 $(function(){
   function buildPost(post){
-    console.log(post)
 
-    if(post.image.url){
-      var image = `<img src=${post.image.url}>`
-    }else{
-      var image =  ""
-    }
-    
+   var image = post.image.url? `<img src=${post.image.url}>` : "";
 
     var html = `<div class="message">
                   <div class="upper-message">
