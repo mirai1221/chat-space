@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
   def index
-    @users =  User.where('title LIKE(?)',"%#{params[:keyword]}%").limit(20)
+    @users =  User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user).limit(20)
     respond_to do |format|
-      format.html
+      format.html { redirect_to new_group_path }
       format.json
     end
   end

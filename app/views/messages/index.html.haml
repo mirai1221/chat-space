@@ -6,11 +6,12 @@
     .main-header
       .main-header__leftbox
         .main-header__leftbox__curent-group
-          sample
+          = @group.name
         .main-header__leftbox__curent-member
-          member:
+          - @group.users.each do |user|
+            =user.name
       .main-header__edit-btn
-        =link_to "Edit","",  {class: "main-header__edit-btn__btn--edit"}
+        =link_to 'Edit', edit_group_path(@group),class: "main-header__edit-btn__btn--edit"
 
     .messages
       = render partial: 'message', collection: @messages
@@ -22,12 +23,3 @@
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-
-    -# .form
-    -#   %form{class: "form-main"}
-    -#     .input-box
-    -#       %input{ placeholder: "type a message", type: "text", class: "input-box_text"}
-    -#         %label.input-box__image{for: "uplord-icon"}
-    -#           = fa_icon 'image'
-    -#           %input{type:"file",value:"&#xf03e",id: "uplord-icon",class:"image-form"}
-    -#     %input{ type:"submit", value:"SEND", class:"submit-btn"}
