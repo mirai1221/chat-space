@@ -5,7 +5,6 @@ $(document).on('turbolinks:load', function() {
                 <p class="chat-group-user__name">${user.name}</p>
                 <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
               </div>`
-    // search_list.append(html);
     return html;
   }
 
@@ -37,7 +36,6 @@ $(document).on('turbolinks:load', function() {
 
     .done(function(users){
       $('#user-search-result').empty();
-      console.log(users)
 
       if (users.lenght !== 0){
         users.forEach(function(user){
