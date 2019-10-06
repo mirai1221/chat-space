@@ -15,15 +15,17 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path, notice: 'グループを作成しました'
     else
+      flash.now.alert = 'グループ名を入力して下さい'
       render :new
     end
   end
 
   def edit
+    @users = @group.users.where.not(id: current_user.id)
   end
 
   def update
-    if group.update(group_params)
+    if @group.update(group_params)
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
       render :edit
@@ -38,4 +40,5 @@ class GroupsController < ApplicationController
   def set_group
     @group = Group.find(params[:id])
   end
+
 end
