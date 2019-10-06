@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function() {
   function buildPost(post){
 
    var image = post.image.url? `<img src=${post.image.url}>` : "";
