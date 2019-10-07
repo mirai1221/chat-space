@@ -124,6 +124,15 @@ a{
     padding: 46px 40px;
     background-color: #fafafa;
     overflow: scroll;
+    .upper-message{
+      display: flex;
+    }
+
+    .upper-message__date{
+      color: #999999;
+      font-size: 12px;
+      margin-left: 10px;
+    }
   }
 
   .form {
