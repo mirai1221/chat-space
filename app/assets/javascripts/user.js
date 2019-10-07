@@ -35,6 +35,7 @@ $(document).on('turbolinks:load', function() {
     })
 
     .done(function(users){
+
       $('#user-search-result').empty();
 
       if (users.lenght !== 0){
