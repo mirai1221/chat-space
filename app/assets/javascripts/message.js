@@ -53,7 +53,6 @@ $(document).on('turbolinks:load', function() {
 
 
   var reloadMessages = function() {
-    console.log("OK");
     last_message_id = $(".message:last").data("id")
     group_id = $(".chat-main").data("id")
     if (location.pathname == `/groups/${group_id}/messages`){
@@ -64,7 +63,6 @@ $(document).on('turbolinks:load', function() {
         data: {id: last_message_id}
       })
       .done(function(messages) {
-        console.log(messages);
         var insertHTML = '';
         messages.forEach(function(post){
         insertHTML += buildPost(post);
