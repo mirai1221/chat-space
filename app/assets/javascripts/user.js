@@ -55,14 +55,16 @@ $(document).on('turbolinks:load', function() {
   });
 
   $(function(){
-    $(document).on('click', '.user-search-add', function() {
+    $(".chat-group-form").on('click', '.user-search-add', function() {
       var user_name = $(this).data("user-name");
       var user_id = $(this).data("user-id");
-      $(this).parent().remove();
       var html = appendMembers(user_name, user_id);
       $('#chat-group-users').append(html);
+      $(this).parent().remove();
     });
+  });
 
+  $(function(){
     $(document).on("click", '.user-search-remove', function() {
       $(this).parent().remove();
     });
